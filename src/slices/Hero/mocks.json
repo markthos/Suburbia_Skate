@@ -26,8 +26,8 @@
 				]
 			},
 			"button": {
-				"__TYPE__": "LinkContent",
 				"key": "30ce2eda-6fcf-4ab1-a95b-c6a667fe75a2",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com",
