@@ -1,11 +1,11 @@
 
 import { Content } from "@prismicio/client";
-import { PrismicNextLink } from "@prismicio/next";
 import { PrismicText, SliceComponentProps } from "@prismicio/react";
 import { JSX } from "react";
 
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
+import { ButtonLink } from "@/components/ButtonLink";
 /**
  * Props for `Hero`.
  */
@@ -31,7 +31,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
           <PrismicText field={slice.primary.body} />
         </div>
-          <PrismicNextLink field={slice.primary.button} />
+      <ButtonLink field={slice.primary.button}
+        icon="skateboard" size="lg" className="z-20 mt-2 block">
+        {slice.primary.button.text}
+      </ButtonLink>
       </div>
     </div>
     </Bounded>
