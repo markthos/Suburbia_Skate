@@ -50,8 +50,9 @@ const TextAndImage = ({ slice }: TextAndImageProps): JSX.Element => {
           </ButtonLink>
         </div>
 
-        <ParallaxImage foregroundImage={slice.primary.foreground_image} backgroundImage={slice.primary.background_image} className="w-full h-96 md:h-96" />
-
+        <ParallaxImage 
+          foregroundImage={slice.primary.foreground_image}
+          backgroundImage={slice.primary.background_image}/> 
       
       
       </div>
