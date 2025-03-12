@@ -8,6 +8,7 @@ import { Heading } from "@/components/Heading";
 import { ButtonLink } from "@/components/ButtonLink";
 import { TallLogo } from "./TallLogo";
 import { WideLogo } from "./WideLogo";
+import { InteractiveSkateboard } from "./InteractiveSkateboard";
 /**
  * Props for `Hero`.
  */
@@ -42,7 +43,8 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         {slice.primary.button.text}
       </ButtonLink>
       </div>
-    </div>
+      </div>
+      <InteractiveSkateboard />
     </Bounded>
   );
 };
