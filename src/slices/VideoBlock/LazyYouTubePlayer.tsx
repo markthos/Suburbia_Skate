@@ -1,4 +1,3 @@
-
 "use client"
 
 import { KeyTextField } from "@prismicio/client";
@@ -12,7 +11,6 @@ export function LazyYouTubePlayer({ youTubeID }: VideoProps) {
     const [isInView, setIsInView] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
  
-
     useEffect(() => {
         const currentContainerRef = containerRef.current;
 
@@ -35,7 +33,6 @@ export function LazyYouTubePlayer({ youTubeID }: VideoProps) {
             }
         }
     });
-
 
   return (
       <div className="relative h-full w-full" ref={containerRef}>
