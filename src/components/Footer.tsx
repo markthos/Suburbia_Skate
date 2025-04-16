@@ -6,6 +6,8 @@ import { createClient } from '@/prismicio';
 import { Logo } from '@/components/Logo';
 import { Bounded } from './Bounded';
 import { FooterPhysics } from './FooterPhysics';
+import { Scroll } from '@react-three/drei';
+import { ScrollToTopLogo } from './ScrollToTopLogo';
 
 
 
@@ -32,21 +34,22 @@ export async function Footer() {
           className="absolute inset-0 overflow-hidden"
         />
         <Logo className="pointer-events-none relative h-20 mix-blend-exclusion md:h-28" />
-              
-
+    
         </div>
-          <Bounded as="nav">
-              <ul className="flex flex-wrap justify-center gap-8 ~text-lg/x1">
-                  {settings.data.navigation.map((item) => (
-                      <li key={item.link.text} className="hover:underline">
-                          <PrismicNextLink field={item.link} />
-                      </li>
-                  ))}
+        <Bounded as="nav">
+            <ScrollToTopLogo />  
+            <ul className="flex flex-wrap justify-center gap-8 ~text-lg/x1">
+                {settings.data.navigation.map((item) => (
+                    <li key={item.link.text} className="hover:underline">
+                        <PrismicNextLink field={item.link} />
+                    </li>
+                ))}
 
-              </ul>
-              
-              
+            </ul>
+            
+ 
           </Bounded>
+
       </footer>
   )
 }
